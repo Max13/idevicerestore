@@ -1,4 +1,3 @@
-
 ## ---Installing idevicerestore---
 
 ## First We Need to Install the dependencies
@@ -14,16 +13,16 @@ python-dev libreadline-dev libusb-dev
 
 git clone git://git.marcansoft.com/usbmuxd.git
 cd usbmuxd
-cmake ~/usbmuxd
+cmake .
 make && sudo make install
 
-cd ~
+cd ..
 
-git clone http://github.com/chronicdev/libirecovery.git
+git clone https://github.com/tokm/libirecovery.git
 cd libirecovery
 make linux && sudo make install
 
-cd ~
+cd ..
 
 git clone http://git.sukimashita.com/libimobiledevice.git
 cd libimobiledevice
@@ -34,7 +33,7 @@ sudo ldconfig
 
 ## Now we can compile idevicerestore
 
-cd ~
+cd ..
 
 git clone http://github.com/posixninja/idevicerestore.git
 cd idevicerestore
@@ -46,7 +45,7 @@ sudo ldconfig
 
 git clone http://github.com/posixninja/ideviceactivate.git
 cd ideviceactivate 
-make
+make && sudo make install
 
 ## idevicerestore usage - may need to be run as root
 
